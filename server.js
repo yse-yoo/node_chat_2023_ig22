@@ -12,4 +12,15 @@ const server = createServer(app);
 // Socket.io を作成
 const io = new Server(server);
 
+// .envの読み込み
+const dotenv = require('dotenv');
+dotenv.config();
+const host = process.env.HOST
+const port = process.env.PORT
+
+// サーバの設定
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
+
+
 

@@ -32,6 +32,3 @@ io.on('connection', (socket) => {
 server.listen(port, host, () => {
     console.log(`listening on http://${host}:${port}`);
 })
-
-
-

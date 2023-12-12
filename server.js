@@ -22,6 +22,12 @@ const port = process.env.PORT
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
+//Socket.ioの接続
+io.on('connection', (socket) => {
+    console.log('connected!!!')
+})
+
+
 //サーバ起動
 http.listen(port, host, () => {
     console.log(`listening on http://${host}:${port}`);

@@ -5,6 +5,11 @@ const url = '';
 // Websocketの接続
 var socket = io.connect(url);
 
+// chatメッセージの受信
+socket.on('chat_message', (data) => {
+    console.log(data);
+})
+
 function sendMessage() {
     var message = document.getElementById('message').value;
     console.log(message);

@@ -4,10 +4,12 @@ const express = require('express')
 const { createServer } = require('node:http');
 // Socket.io の Sever module 読み込み
 const { Server } = require('socket.io');
-// サーバー作成
-const app = express();
 
+// Expressサーバー作成
+const app = express();
 const server = createServer(app);
+
+// Socket.io を作成
 const io = new Server(server);
 
 

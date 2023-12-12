@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
 
 
 //サーバ起動
-http.listen(port, host, () => {
+server.listen(port, host, () => {
     console.log(`listening on http://${host}:${port}`);
 })
 

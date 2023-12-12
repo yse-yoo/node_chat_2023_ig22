@@ -25,6 +25,11 @@ const port = process.env.PORT
 //Socket.ioの接続
 io.on('connection', (socket) => {
     console.log('connected!!!')
+
+    //chatメッセージの受信
+    socket.on('chat_message', (data) => {
+        console.log(data);
+    })
 })
 
 

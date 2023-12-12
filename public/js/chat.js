@@ -9,7 +9,7 @@ var socket = io.connect(url);
 socket.on('chat_message', (data) => {
     console.log(data);
     var p = document.createElement('p');
-    p.innerHTML = data.message;
+    p.innerHTML = data.socket_id + ": " + data.message;
     document.getElementById('messageList').append(p);
 })
 

@@ -28,6 +28,7 @@ io.on('connection', (socket) => {
 
     //chatメッセージの受信
     socket.on('chat_message', (data) => {
+        console.log(socket.id);
         console.log(data);
     })
 })

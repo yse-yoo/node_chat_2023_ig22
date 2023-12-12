@@ -18,3 +18,9 @@ npm i dotenv
 ```
 npm i socket.io
 ```
+
+5. .envファイルの作成
+HOST=localhost
+PORT=3000
+
+6. serve.jsファイルの作成

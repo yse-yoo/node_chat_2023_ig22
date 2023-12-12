@@ -7,6 +7,10 @@ const { Server } = require('socket.io');
 
 // Expressサーバー作成
 const app = express();
+// サーバの設定
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/public'));
+
 const server = createServer(app);
 
 // Socket.io を作成
@@ -17,10 +21,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const host = process.env.HOST
 const port = process.env.PORT
-
-// サーバの設定
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
 
 //Socket.ioの接続
 io.on('connection', (socket) => {
